@@ -1,0 +1,39 @@
+/* Estil General del Cos */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+    color: #000000;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: #66bb6a;
+    padding: 10px 0; /* Ajusta aquest valor segons les necessitats de l'espai al voltant del banner */
+    display: flex;
+    justify-content: center; /* Centra el banner horizontalment */
+}
+
+#banner-header {
+    max-width: 70%; /* Assegura que el banner no sobrepassi l'amplada de la pantalla */
+    height: auto; /* Manté les proporcions del banner */
+}
+
+main {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+}
+
+footer {
+    background-color: #388e3c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
