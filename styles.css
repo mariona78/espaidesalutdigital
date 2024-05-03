@@ -1,39 +1,89 @@
-/* Estil General del Cos */
-body {
-    font-family: 'Arial', sans-serif;
+/* Estils generals del cos de la pàgina */
+html, body {
     margin: 0;
     padding: 0;
-    background-color: #e8f5e9;
-    color: #000000;
-    text-align: center;
+    width: 100%; /* Asegura que el cos de la pàgina ocupi tota l'amplada possible */
+    box-sizing: border-box; /* Els paddings i borders no expandiran els elements més enllà de l'amplada especificada */
 }
 
+/* Estils de la capçalera */
 header {
-    width: 100%;
-    background-color: #66bb6a;
-    padding: 10px 0; /* Ajusta aquest valor segons les necessitats de l'espai al voltant del banner */
+    width: 100%; /* Assegura que la capçalera s'estén a tota l'amplada */
+    background-color: #66bb6a; /* Color verd clar, especificat per cobrir tota la capçalera */
+    padding: 10px 0;
     display: flex;
-    justify-content: center; /* Centra el banner horizontalment */
+    flex-direction: column;
+    align-items: center;
 }
 
 #banner-header {
-    max-width: 70%; /* Assegura que el banner no sobrepassi l'amplada de la pantalla */
-    height: auto; /* Manté les proporcions del banner */
+    max-width: 100%; /* Permet que la imatge del banner també ocupe tota l'amplada si és necessari */
+    height: auto;
 }
 
-main {
+/* Configuració del menú principal per a cobrir tota l'amplada */
+.main-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Assegura que el menú ocupa tota l'amplada */
+    display: flex;
+    justify-content: center;
+    background-color: #66bb6a; /* Manté el color consistent amb la capçalera */
+}
+
+.main-menu li {
+    flex-grow: 1; /* Distribueix l'espai igualment entre els elements del menú */
+    text-align: center;
+}
+
+.main-menu a {
+    display: block;
     padding: 20px;
-    background-color: #ffffff;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-section {
-    max-width: 800px;
-    margin: auto;
+.main-menu a:hover {
+    background-color: #99c8a0; /* Un to més fosc de verd per a l'efecte hover */
 }
 
 footer {
-    background-color: #388e3c;
-    color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    width: 100%;
+    background-color: #388e3c; /* Assegura que el footer també cobreix tota l'amplada */
+    color: white;
+    padding: 16px 0;
 }
+
+/* Estils per centrar el contingut de 'main' */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Prend tota l'amplada */
+    background-color: #ffffff; /* Fons blanc */
+}
+
+/* Estils per a la secció específica dins de 'main' */
+section {
+    text-align: center; /* Text centrat dins de la secció */
+    padding: 20px;
+    max-width: 800px; /* Limita l'amplada màxima per una millor llegibilitat */
+    margin: 0 auto; /* Centra la secció horitzontalment */
+}
+/* Estils per a la imatge dins de la secció */
+section img {
+    width: 200px; /* Nou ample de la imatge */
+    height: auto; /* Manté les proporcions de la imatge */
+    margin-left: 0; /* Elimina el marge esquerre */
+    margin-right: auto; /* Alinea la imatge al marge dret de la pantalla */
+}
+
+h2, p {
+    margin: 10px 0; /* Espaiat vertical per millorar la separació del text */
+}
+
+
