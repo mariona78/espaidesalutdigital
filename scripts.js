@@ -19,4 +19,18 @@
       "path": "/path/to/jdk-20",
       "default": true
     },
-  ]
+<script>
+function showCurriculum() {
+    var icon = document.getElementById("profile-icon");
+    var curriculum = document.getElementById("curriculum");
+
+    // Alternar la visibilitat de l'ícona i el currículum
+    if (curriculum.style.display === "none") {
+        icon.style.display = "none";
+        curriculum.style.display = "block";
+    } else {
+        icon.style.display = "block";
+        curriculum.style.display = "none";
+    }
+}
+</script>
