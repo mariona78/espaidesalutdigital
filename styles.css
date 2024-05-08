@@ -1,89 +1,94 @@
-/* Estils generals del cos de la pàgina */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Asegura que el cos de la pàgina ocupi tota l'amplada possible */
-    box-sizing: border-box; /* Els paddings i borders no expandiran els elements més enllà de l'amplada especificada */
+/* Estils generals */
+body, html {
+  font-family: 'Courier', monospace; /* Utilitza la lletra Courier per a tot el text */
+  margin: 0;
+  padding: 0;
+  background-color: #e8f5e9; /* Fons verd molt clar */
+  color: #333; /* Color del text */
 }
 
-/* Estils de la capçalera */
 header {
-    width: 100%; /* Assegura que la capçalera s'estén a tota l'amplada */
-    background-color: #66bb6a; /* Color verd clar, especificat per cobrir tota la capçalera */
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column; /* Organitza els elements verticalment */
+  align-items: center; /* Centra els elements horitzontalment */
+  width: 100%; /* Assegura que el capçal pren tota l'amplada */
 }
 
-#banner-header {
-    max-width: 100%; /* Permet que la imatge del banner també ocupe tota l'amplada si és necessari */
-    height: auto;
+.banner img {
+  width: 100%; /* El banner ocupa tota l'amplada del capçal */
+  height: auto; /* Manté les proporcions del banner */
 }
 
-/* Configuració del menú principal per a cobrir tota l'amplada */
+nav .menu, .main-menu {
+  width: 100%; /* Assegura que la navegació ocupa tota l'amplada */
+  text-align: center; /* Centra el menú dins de la navegació */
+}
+
 .main-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Assegura que el menú ocupa tota l'amplada */
-    display: flex;
-    justify-content: center;
-    background-color: #66bb6a; /* Manté el color consistent amb la capçalera */
+  list-style-type: none; /* Elimina els punts dels ítems de la llista */
+  padding: 0; /* Elimina el padding predeterminat */
+  margin: 20px 0; /* Afegeix un marge vertical per separar del banner */
+  display: flex; /* Utilitza flex per ajustar els ítems de la llista en línia */
+  justify-content: center; /* Centra els ítems de la llista horitzontalment */
+  background-color: #333; /* Fons per a la barra del menú */
 }
 
 .main-menu li {
-    flex-grow: 1; /* Distribueix l'espai igualment entre els elements del menú */
-    text-align: center;
+  position: relative; /* Posició relativa per als submenús */
 }
 
-.main-menu a {
-    display: block;
-    padding: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
+.main-menu li a, .dropbtn {
+  display: block;
+  color: rgb(228, 236, 229);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.main-menu a:hover {
-    background-color: #99c8a0; /* Un to més fosc de verd per a l'efecte hover */
+.main-menu li a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #393838;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 footer {
-    text-align: center;
-    width: 100%;
-    background-color: #388e3c; /* Assegura que el footer també cobreix tota l'amplada */
-    color: white;
-    padding: 16px 0;
+  background-color: #388e3c; /* Color de fons del peu de pàgina */
+  color: #ffffff; /* Color del text del peu de pàgina */
+  text-align: center; /* Centra el text del peu de pàgina */
+  padding: 10px 0; /* Padding vertical per al peu de pàgina */
 }
-
-/* Estils per centrar el contingut de 'main' */
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%; /* Prend tota l'amplada */
-    background-color: #ffffff; /* Fons blanc */
-}
-
-/* Estils per a la secció específica dins de 'main' */
-section {
-    text-align: center; /* Text centrat dins de la secció */
-    padding: 20px;
-    max-width: 800px; /* Limita l'amplada màxima per una millor llegibilitat */
-    margin: 0 auto; /* Centra la secció horitzontalment */
-}
-/* Estils per a la imatge dins de la secció */
-section img {
-    width: 200px; /* Nou ample de la imatge */
-    height: auto; /* Manté les proporcions de la imatge */
-    margin-left: 0; /* Elimina el marge esquerre */
-    margin-right: auto; /* Alinea la imatge al marge dret de la pantalla */
-}
-
-h2, p {
-    margin: 10px 0; /* Espaiat vertical per millorar la separació del text */
-}
+  display: flex; /* Estableix main com un contenidor flex */
+  flex-direction: column; /* Elements apilats verticalment */
+  align-items: center; /* Centra els elements horitzontalment */
+  justify-content: center; /* Centra els elements verticalment */
+  min-height: 80vh; /* Assegura que main té una alçada mínima */
+  padding: 20px; /* Espai al volt
 
 
